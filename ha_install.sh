@@ -173,7 +173,7 @@ TMPDIR=${STORAGE_TMP} pip3 install --no-cache-dir --no-deps -r /tmp/requirements
 # add zeroconf
 grep 'zeroconf' /tmp/requirements_nodeps.txt >> /tmp/owrt_constraints.txt
 # fix deps
-sed -i -e 's/cryptography \(.*\)/cryptography >=36.0.2/' -e 's/chacha20poly1305-reuseable \(.*\)/chacha20poly1305-reuseable >=0.10.0' /usr/lib/python${PYTHON_VERSION}/site-packages/aioesphomeapi-*-info/METADATA
+# sed -i -e 's/cryptography \(.*\)/cryptography >=36.0.2/' -e 's/chacha20poly1305-reuseable \(.*\)/chacha20poly1305-reuseable >=0.10.0' /usr/lib/python${PYTHON_VERSION}/site-packages/aioesphomeapi-*-info/METADATA
 
 cat << EOF > /tmp/requirements.txt
 tzdata>=2021.2.post0  # 2021.6+ requirement
